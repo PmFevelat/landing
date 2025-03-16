@@ -1,12 +1,11 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
-// @ts-expect-error - Module path alias
 import { ContactFormEmail } from '@/emails/contact-form';
 import { render } from '@react-email/render';
 
-// Utilisation de l'API Resend
-// @ts-expect-error - Process est disponible dans l'environnement Next.js
-const resend = new Resend(process.env.RESEND_API_KEY || '');
+// Création d'une instance Resend avec une clé API
+const resendApiKey = process.env.RESEND_API_KEY || '';
+const resend = new Resend(resendApiKey);
 
 export async function POST(request: Request) {
   try {
