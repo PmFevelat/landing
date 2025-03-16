@@ -6,9 +6,13 @@ import React from 'react'
 import { cn } from '@/lib/utils'
 import { FullLogo } from './full-logo'
 
-const menuItems = [
-    { name: 'Solution', href: '#link' },
-    { name: 'About', href: '#link' },
+type MenuItem = {
+    name: string
+    href: string
+}
+
+const menuItems: MenuItem[] = [
+    // Les éléments de menu ont été supprimés
 ]
 
 export const HeroHeader = () => {
