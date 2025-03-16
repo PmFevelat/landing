@@ -1,35 +1,24 @@
-import {
-  Html,
-  Head,
-  Body,
-  Container,
-  Section,
-  Text,
-  Heading,
-  Hr,
-  Preview,
-} from '@react-email/components';
-import * as React from 'react';
-
-interface ContactFormEmailProps {
+type ContactFormEmailProps = {
   name: string;
   email: string;
   message: string;
   type: 'contact' | 'waitlist';
-}
+};
 
 export const ContactFormEmail = ({
   name,
   email,
   message,
   type,
-}: ContactFormEmailProps) => {
+}: ContactFormEmailProps): string => {
+  const title = type === 'contact' ? 'Nouveau message de contact' : "Nouvelle inscription à la liste d'attente";
+  
   return `
     <!DOCTYPE html>
     <html>
       <head>
         <meta charset="utf-8">
-        <title>${type === 'contact' ? 'Nouveau message de contact' : "Nouvelle inscription à la liste d'attente"}</title>
+        <title>${title}</title>
       </head>
       <body style="
         background-color: #ffffff;
@@ -48,7 +37,7 @@ export const ContactFormEmail = ({
             line-height: 1.4;
             margin: 16px 0;
           ">
-            ${type === 'contact' ? 'Nouveau message de contact' : "Nouvelle inscription à la liste d'attente"}
+            ${title}
           </h1>
           
           <div style="
