@@ -63,10 +63,8 @@ export default function WaitlistPage() {
       });
       form.reset();
     } catch (error) {
-      toast.error('Une erreur est survenue lors de l\'inscription.', {
-        duration: 5000,
-        closeButton: true,
-      });
+      console.error('Error sending message:', error);
+      toast.error('Une erreur est survenue lors de l\'inscription.', { duration: 5000, closeButton: true });
     }
   }
 

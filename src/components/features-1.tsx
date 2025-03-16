@@ -1,7 +1,7 @@
 import { TextEffect } from '@/components/text-effect'
 import { AnimatedGroup } from '@/components/animated-group'
 import { Shield, LineChart, Users } from 'lucide-react'
-import Image from 'next/image'
+import React from 'react'
 
 const features = [
     {
