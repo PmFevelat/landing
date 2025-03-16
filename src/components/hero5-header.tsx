@@ -34,7 +34,7 @@ export const HeroHeader = () => {
                                 href="/"
                                 aria-label="home"
                                 className="flex items-center space-x-2">
-                                <FullLogo className="h-8 w-auto" />
+                                <FullLogo className="h-10 w-auto" />
                             </Link>
 
                             <button
