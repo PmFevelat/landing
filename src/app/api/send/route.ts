@@ -5,6 +5,7 @@ import { render } from '@react-email/render';
 
 // Création d'une instance Resend avec une clé API
 const resendApiKey = process.env.RESEND_API_KEY || '';
+const notificationEmail = process.env.NOTIFICATION_EMAIL || 'pierremarie.fevelat@gmail.com';
 const resend = new Resend(resendApiKey);
 
 export async function POST(request: Request) {
@@ -17,7 +18,7 @@ export async function POST(request: Request) {
 
     const data = await resend.emails.send({
       from: 'Contact Form <onboarding@resend.dev>',
-      to: ['pierremarie.fevelat@gmail.com'],
+      to: [notificationEmail],
       subject: type === 'waitlist' ? 'Nouvelle inscription à la liste d\'attente' : 'Nouveau message de contact',
       html: emailHtml,
       replyTo: email
