@@ -117,7 +117,7 @@ const link = {
 const footer = {
   color: '#666',
   fontSize: '14px',
-  textAlign: 'center',
+  textAlign: 'center' as const,
   padding: '0 24px 24px',
   margin: '16px 0 0',
 };
