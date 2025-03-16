@@ -4,7 +4,7 @@ import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import React from 'react'
 import { cn } from '@/lib/utils'
-import { ShieldLogo } from './shield-logo'
+import { FullLogo } from './full-logo'
 
 const menuItems = [
     { name: 'Solution', href: '#link' },
@@ -34,7 +34,7 @@ export const HeroHeader = () => {
                                 href="/"
                                 aria-label="home"
                                 className="flex items-center space-x-2">
-                                <ShieldLogo />
+                                <FullLogo className="h-8 w-auto" />
                             </Link>
 
                             <button
